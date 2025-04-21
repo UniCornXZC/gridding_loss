@@ -7,7 +7,7 @@
 
 from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
-
+os.environ["TORCH_CUDA_ARCH_LIST"] = "5.0;6.0;6.1;6.2;7.0;7.5;8.0;8.7;9.0"
 setup(name='gridding_distance',
       version='1.0.0',
       ext_modules=[
